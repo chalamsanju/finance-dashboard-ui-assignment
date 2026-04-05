@@ -13,7 +13,7 @@ export const DashboardProvider = ({ children }) => {
       setIsLoading(true);
       // Simulate API network latency
       await new Promise(resolve => setTimeout(resolve, 800));
-      const saved = localStorage.getItem('dashboard_transactions');
+      const saved = localStorage.getItem('dashboard_transactions_v2');
       if (saved) {
         setTransactions(JSON.parse(saved));
       } else {
@@ -38,7 +38,7 @@ export const DashboardProvider = ({ children }) => {
   // Save to localStorage whenever state changes, but ONLY after initial fetch
   useEffect(() => {
     if (isInitialized) {
-      localStorage.setItem('dashboard_transactions', JSON.stringify(transactions));
+      localStorage.setItem('dashboard_transactions_v2', JSON.stringify(transactions));
     }
   }, [transactions, isInitialized]);
 
