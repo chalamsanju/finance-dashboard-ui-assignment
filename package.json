@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/gkemhcs/sanjay-project",
+  "homepage": "https://chalamsanju.github.io/finance-dashboard-ui-assignment/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
