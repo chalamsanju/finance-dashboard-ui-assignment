@@ -23,23 +23,23 @@ const Header = ({ toggleSidebar }) => {
         <div className="flex items-center bg-secondary rounded-full p-1 border border-border">
           <button
             onClick={() => role !== 'viewer' && toggleRole()}
-            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all ${
+            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
               role === 'viewer' 
                 ? 'bg-background shadow-sm text-foreground' 
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            Viewer
+            Sanjay Chalam
           </button>
           <button
             onClick={() => role !== 'admin' && toggleRole()}
-            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all ${
+            className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
               role === 'admin' 
                 ? 'bg-background shadow-sm text-foreground' 
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            Admin
+            Superuser
           </button>
         </div>
 

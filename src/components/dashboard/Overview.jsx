@@ -147,17 +147,17 @@ const Overview = () => {
             <CardTitle>Spending Breakdown</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-[300px] w-full flex items-center justify-center">
+            <div className="h-[380px] w-full flex flex-col items-center justify-center pt-2">
                {pieData.length > 0 ? (
                  <ResponsiveContainer width="100%" height="100%">
                    <PieChart>
                      <Pie
                        data={pieData}
                        cx="50%"
-                       cy="45%"
-                       innerRadius={60}
-                       outerRadius={80}
-                       paddingAngle={5}
+                       cy="40%"
+                       innerRadius={65}
+                       outerRadius={90}
+                       paddingAngle={3}
                        dataKey="value"
                        stroke="none"
                      >
@@ -169,7 +169,12 @@ const Overview = () => {
                         formatter={(value) => `₹${value}`}
                         contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)', borderRadius: '8px' }}
                       />
-                     <Legend verticalAlign="bottom" height={36} iconType="circle"/>
+                     <Legend 
+                        verticalAlign="bottom" 
+                        height={80} 
+                        iconType="circle"
+                        wrapperStyle={{ paddingTop: '20px', fontSize: '12px' }}
+                     />
                    </PieChart>
                  </ResponsiveContainer>
                ) : (
