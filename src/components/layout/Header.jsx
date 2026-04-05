@@ -9,13 +9,11 @@ const Header = ({ toggleSidebar }) => {
   return (
     <header className="h-16 px-6 border-b border-border bg-card flex items-center justify-between sticky top-0 z-20">
       <div className="flex items-center">
-        <button 
-          onClick={toggleSidebar}
-          className="md:hidden mr-4 p-2 text-muted-foreground hover:bg-secondary rounded-lg"
-        >
-          <Menu className="w-5 h-5" />
-        </button>
-        <h2 className="text-xl font-semibold text-foreground tracking-tight hidden sm:block">
+        {/* Render a cool FinTech logo icon instead of a broken hamburger menu */}
+        <div className="w-8 h-8 rounded-xl bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 mr-3">
+          <span className="text-white font-bold text-sm tracking-tighter">F.</span>
+        </div>
+        <h2 className="text-xl font-bold text-foreground tracking-tight">
           Dashboard
         </h2>
       </div>
