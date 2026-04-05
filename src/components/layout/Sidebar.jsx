@@ -52,7 +52,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-foreground truncate">
-              {role === 'admin' ? 'Admin User' : 'Viewer User'}
+              {role === 'admin' ? 'Superuser' : 'Sanjay Chalam'}
             </p>
             <p className="text-xs text-muted-foreground truncate capitalize">
               Role: {role}

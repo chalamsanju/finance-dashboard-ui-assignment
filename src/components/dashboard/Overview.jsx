@@ -38,7 +38,7 @@ const Overview = () => {
     
     return Object.values(grouped).sort((a, b) => new Date(a.date) - new Date(b.date)).map(item => ({
       ...item,
-      displayDate: format(parseISO(item.date), 'MMM dd')
+      displayDate: format(parseISO(item.date), 'MMM dd, yy')
     }));
   }, [transactions]);
 

@@ -13,7 +13,11 @@ const Header = ({ toggleSidebar }) => {
         <div className="w-8 h-8 rounded-xl bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 mr-3">
           <span className="text-white font-bold text-sm tracking-tighter">F.</span>
         </div>
-        <h2 className="text-xl font-bold text-foreground tracking-tight">
+        <div className="md:hidden flex flex-col">
+          <span className="text-sm font-bold text-foreground truncate">{role === 'admin' ? 'Superuser' : 'Sanjay Chalam'}</span>
+          <span className="text-[10px] text-muted-foreground capitalize">Role: {role}</span>
+        </div>
+        <h2 className="text-xl font-bold text-foreground tracking-tight hidden md:block">
           Dashboard
         </h2>
       </div>
@@ -29,7 +33,7 @@ const Header = ({ toggleSidebar }) => {
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            Sanjay Chalam
+            Viewer
           </button>
           <button
             onClick={() => role !== 'admin' && toggleRole()}
@@ -39,7 +43,7 @@ const Header = ({ toggleSidebar }) => {
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            Superuser
+            Admin
           </button>
         </div>
 
